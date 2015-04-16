@@ -7,7 +7,7 @@ public class networkInterface : MonoBehaviour {
 	void OnGUI() {
 		if(!Network.isClient && !Network.isServer) {
 			if(GUI.Button(new Rect(15,15,300,30), "Start Server")) {
-				gameObject.GetComponent<networkManager>().startServer(4, port, false);
+				gameObject.GetComponent<networkManager>().startServer(4, port, true);
 			}
 			if(GUI.Button(new Rect(15,45,300,30), "Join Server")) {
 				gameObject.GetComponent<networkManager>().joinServer(ip, port, "");
